@@ -1,1 +1,68 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.row {
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Common box style */
+.col {
+  background-color: #f4f4f4;
+  border: 1px solid #000;
+  padding: 40px 15px 15px 15px;
+  margin-bottom: 15px;
+  position: relative;
+  float: left;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffa500;
+  color: #000;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+/* Desktop: 3 equal boxes in 1 row */
+@media (min-width: 992px) {
+  .col {
+    width: 33.33%;
+    margin-bottom: 0;
+  }
+}
+
+/* Tablet: 2 boxes in first row, 1 in second row */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col {
+    width: 50%;
+  }
+  .col:nth-child(3) {
+    width: 100%;
+  }
+}
+
+/* Mobile: Each box takes full width */
+@media (max-width: 767px) {
+  .col {
+    width: 100%;
+  }
+}
